@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>StickyNote</title>
+  <link rel='stylesheet' type='text/css' href='./styles.css'>
+  <!--Import Quill (a rich text editor) stylesheet-->
+  <link href="https://cdn.quilljs.com/1.3.4/quill.snow.css" rel="stylesheet">
+</head>
+
+<body>
+  <!-- Navigation -->
+  <nav id="id_navbar">
+    <div class='container'>
+		<img id="id_stickynote_img" src="./Images/stickynote.png" height=50/>
+		<div>
+			<span id="id_stickynote_title">StickyNote</span>
+		</div>
+		<div id="id_div_login">
+			<span id="id_login_button" class="clickable">LOGIN</span>
+		</div>
+    </div>
+  </nav>
+
+  <!-- Login Form -->
+  <div id='id_dropdown_login' class='login-form hidden'>
+    <div class='container'>
+      <form id="id_login_form">
+        <h4>Username</h4>
+        <input name='username' placeholder="Username"/>
+        <h4>Password</h4>
+        <input name='password' type='password' placeholder="Password"/>
+		<p id="error_invalid_username_or_password" class="error_msg hidden">ERROR: Invalid Username-Password Combination Given</p>
+        <input class="submit_button clickable" type='submit' value='Sign In'/>
+      </form>
+    </div>
+  </div>
+  <!--Logout form-->
+  <div id="id_dropdown_logout" class='login-form hidden'>
+    <div class='container'>
+      <form id="id_logout_form">
+        <h4 id="id_greeting_user">Hi USERNAME!</h4>
+        <input class="submit_button clickable" type='submit' value='Log Out'/>
+      </form>
+    </div>
+  </div>
+
+  <!--StickyNotes grid:-->
+  <div class="stickyNotesGrid">
+	<div class="sticky_div">
+		<div class='clickable' id="id_add_sticky_button">
+			<img class='sticky_img sticky_elem' src='./Images/stickynote_yellow.png'/>
+			<img class='sticky_plus_img sticky_elem' src='./Images/plusicon_opaque.png'/>
+			<p class='add_sticky_text sticky_elem'>Add Sticky</p>
+		</div>
+	</div>
+	<!--Actual stickynote data is added dynamically-->
+  </div>
+  
+  <!--Stickynote creation/edit screen-->
+  <div class="popup popup_elem hidden" id="id_popup_add_sticky">
+	<div class="sticky_edit popup_elem">
+		<div class="header popup_elem">
+			<h1 class="popup_elem popup_title">POPUP TITLE</h1>
+		</div>
+		<div class="body">
+			<div id="id_sticky_options">
+				<form id="id_sticky_options_form_colour" class="sticky_option_element">
+					<h3>Sticky Colour:</h3>
+					<!--Form is populated dynamically-->
+				</form>
+				<div id="id_sticky_options_delete_sticky" class="sticky_option_element edit_only clickable">
+					<div>
+						<img id="id_trashcan_icon" src="./Images/trashcan_white_closed.png" height=25/>
+						<h3>Delete Sticky</h3>
+					</div>
+				</div>
+			</div>
+			<form id="id_sticky_form">
+				<h2>Title:</h2>
+				<input name='title' class="editor_input" placeholder="Insert Title Here..."/>
+				<h2>Contents</h2>
+				<div class="quill_editor_holder editor_input">
+					<div class="quill_editor"></div>
+				</div>
+				<div class="buttons">
+					<input class="popup_submit_button clickable" type='submit' value='Save'/>
+					<input class="popup_cancel_button clickable" type='submit' value='Cancel'/>
+				</div>
+			</form>
+		</div>
+	</div>
+	<!--Grey out the rest of the screen (to prevent button presses as well)-->
+	<div class="hide_screen"></div>
+  </div>
+
+	<!--Import JQuery-->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<!--Import the Scrollbar appear-listener-->
+	<script src="./Scripts/scrollbar-resize-listener.js"></script>
+	<!-- Include the Quill library -->
+	<script src="https://cdn.quilljs.com/1.3.4/quill.js"></script>
+	<!--Import the JS file-->
+	<script src='./index.js'></script> 
+</body>
+
+</html>
