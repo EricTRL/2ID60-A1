@@ -1,14 +1,16 @@
 //AUTHOR: 1004076
 //NOTE: This could probably be done way more efficient, but at least it works
 /*Browser Compatibility:
+Versions lower than the ones specified here are probabably NOT compatible/do NOT work.
+Versions of incompatible browsers released after 6-12-2017 may become compatible in the future once CSS Grid properties are implemented in those browsers
 Desktop Browsers:
 	Works on: 								Chrome (v57+)
-	Doesn't work on: 						IE, Edge (grid-template-columns)
-	Presumably works on (but not tested): 	[Edge (v16+)], Firefox (v52+), Opera (v44+), Safari v(10.1+)
+	Doesn't work on: 						IE, Opera Mini
+	Presumably works on (but not tested): 	Edge (v16+), Firefox (v52+), Opera (v47+), iOS Safari (v10.3+), Safari (v10.1+))
 Mobile Browsers:
-	Works on: 								-
-	Doesn't work on:						IE Mobile
-	Presumably works on (but not tested):	Android webview (v57+), Chrome for Android (v57+), Edge Mobile (v16+), Firefox for Android (v52+), Opera Android (v44+), iOS Safari (v10.3+)
+	Works on: 								Android webview (v62+), Chrome for Android (v62+), Samsung Internet (v62+)
+	Doesn't work on:						IE Mobile, Opera Mobile, Blackberry Browser
+	Presumably works on (but not tested):	Firefox for Android (v57+), iOS Safari (v10.3+), Safari (v10.1+)
 TODO: grid-template-columns for Edge. Test other browsers.
 */
 
