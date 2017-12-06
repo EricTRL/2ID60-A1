@@ -139,7 +139,7 @@ function calculateGridSize() {
 	if (iWidth != iPrevNavWidth){
 		iPrevNavWidth = iWidth;
 		let sColSize = $(".stickyNotesGrid").css("grid-template-columns");
-			console.log($(".stickyNotesGrid").css("-ms-grid-columns")); //!!!???
+
 		sColSize = sColSize.slice(0,sColSize.search("px"));
 		const iColSize = parseInt(sColSize);
 		//console.log("Width: " + iWidth + " | colSize: " + iColSize /*+ " | gridGap: " + sGridGap*/);
